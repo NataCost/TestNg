@@ -1,9 +1,20 @@
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 /**
  * Created by Nata_Cost on 03.03.2016.
  */
 public class TestRunner {
+    @BeforeMethod
+    public  void  ThisBeforeTestMethod(){
+        System.out.println("Method before");
+    }
+    @AfterMethod
+    public void ThisAfterTestMethod() {
+        System.out.println("Method after");
+    }
+
     @Test
     public void ThisIsTestMethod1(){
         System.out.println("Method 1");
@@ -18,5 +29,6 @@ public class TestRunner {
         System.out.println("Method 3");
 
     }
+
 
 }
